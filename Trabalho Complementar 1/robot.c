@@ -1,3 +1,5 @@
+// gcc robot.c -lglut -lGL -lGLU -lm -o robot && ./robot
+
 #include <GL/glut.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -64,8 +66,8 @@ void SetupRC() {
     // Set Material properties to follow glColor values
     glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
 
-    // Black blue background
-    glClearColor(0.0f, 0.4f, 0.0f, 0.0f);
+    // Background
+    glClearColor(0.9f, 0.4f, 0.5f, 0.0f);
 }
 
 // Respond to arrow keys (rotate snowman)
@@ -142,7 +144,7 @@ void paint(void) {
     cubo(e, cordP(0.05f, 1.0f, 0.05f, 0.7f), tl(1.62f, 1.6f + tm, -0.05f), rt(0, 1.0f, 0.0f, 0.0f), cl(0.0f, 0.0f, 1.0f));
 
     // Corpo
-    cubo(e, cordP(2.0f, 2.0f, 0.5f, 1.0f), tl(1.65f, 3.5f + tm, 0.0f), rt(0, 1.0f, 0.0f, 0.0f), cl(1.0f, 1.0f, 0.0f));
+    cubo(e, cordP(2.0f, 2.0f, 0.5f, 1.0f), tl(1.65f, 3.5f + tm, 0.0f), rt(0, 1.0f, 0.0f, 0.0f), cl(0.1f, 0.0f, 0.0f));
 
     // Braço 1
     cubo(e, cordP(0.05f, 1.5f, 0.05f, 0.7f), tl(2.5f, 4.5f + tm, 0.0f), rt(90, 1.0f, 0.0f, 0.0f), cl(0.0f, 0.0f, 1.0f));

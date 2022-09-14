@@ -72,7 +72,7 @@ void SpecialKeys(int key, int x, int y){
   
     if(key == GLUT_KEY_RIGHT)  
         yRot += 5.0f;
-
+        
 
                   
     yRot = (GLfloat)((const int)yRot % 360);  
